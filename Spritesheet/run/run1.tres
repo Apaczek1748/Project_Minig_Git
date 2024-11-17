@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://drbdyv1lje23f"]
+
+[ext_resource type="Texture2D" uid="uid://s6ymvvf7ha6r" path="res://Spritesheet/TileMap/monochrome-transparent.png" id="1_ql0rc"]
+
+[resource]
+atlas = ExtResource("1_ql0rc")
+region = Rect2(341.239, 122.33, 13.909, 12.1831)
