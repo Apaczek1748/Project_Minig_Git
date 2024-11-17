@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b0nk56kisdkx7"]
-
-[ext_resource type="Texture2D" uid="uid://byuyqwupp72hq" path="res://Spritesheet/TileMap/colored-transparent_packed.png" id="1_6d4m6"]
-
-[resource]
-atlas = ExtResource("1_6d4m6")
-region = Rect2(288.742, 115.716, 14.1831, 13.2897)
