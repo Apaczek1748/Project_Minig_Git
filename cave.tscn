@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://cp34mxcqfpx6p"]
+[gd_scene load_steps=9 format=4 uid="uid://cp34mxcqfpx6p"]
 
 [ext_resource type="Script" path="res://cave.gd" id="1_axb31"]
 [ext_resource type="Texture2D" uid="uid://s6ymvvf7ha6r" path="res://Spritesheet/TileMap/monochrome-transparent.png" id="1_mg5yd"]
@@ -1485,6 +1485,9 @@ terrain_set_0/terrain_0/color = Color(0.365267, 0.688298, 0.286307, 1)
 sources/0 = SubResource("TileSetAtlasSource_rpx7a")
 sources/2 = SubResource("TileSetAtlasSource_ulf2g")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xlqmp"]
+radius = 60.0333
+
 [node name="Cave" type="Node2D"]
 position = Vector2(298, 159)
 script = ExtResource("1_axb31")
@@ -1497,3 +1500,8 @@ tile_map_data = PackedByteArray("AAAXABsAAgAKAAAAAAAYABsAAgAKAAAAAAAZABsAAgAKAAA
 tile_set = SubResource("TileSet_3eoco")
 
 [node name="MC" parent="." instance=ExtResource("2_4vaqv")]
+
+[node name="Czy_kop" type="Area2D" parent="MC"]
+
+[node name="Zasieg_kop" type="CollisionShape2D" parent="MC/Czy_kop"]
+shape = SubResource("CircleShape2D_xlqmp")
