@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732379752
-cave.gd::GDScript::-1::1732326054::0::1::::<>Node2D<>::
-cave.tscn::PackedScene::5885260033248375633::1732327645::0::1::::<><>::res://cave.gd<>uid://s6ymvvf7ha6r::::res://Spritesheet/TileMap/monochrome-transparent.png<>uid://24nafn7ky2gt::::res://Prefab/mc.tscn<>uid://cv3lwl5ofiy0k::::res://Spritesheet/TileMap/set.png
+::res://::1732385648
+cave.gd::GDScript::-1::1732383473::0::1::::<>Node2D<>::
+cave.tscn::PackedScene::5885260033248375633::1732383691::0::1::::<><>::res://cave.gd<>uid://s6ymvvf7ha6r::::res://Spritesheet/TileMap/monochrome-transparent.png<>uid://24nafn7ky2gt::::res://Prefab/mc.tscn<>uid://cv3lwl5ofiy0k::::res://Spritesheet/TileMap/set.png
+czy_kop.gd::GDScript::-1::1732380449::0::1::::<>Area2D<>::
 README.md::TextFile::-1::1731846349::0::1::::<><>::
-::res://Prefab/::1732327645
+::res://Prefab/::1732383691
 mc.gd::GDScript::-1::1731847883::0::1::::<>CharacterBody2D<>::
-mc.tscn::PackedScene::1955755338168051691::1732327645::0::1::::<><>::res://Prefab/mc.gd<>uid://bgail6e2aswlb::::res://Spritesheet/idle/mc.tres<>uid://h3e7ad3iavys::::res://Spritesheet/jump/grav.png<>uid://b0nk56kisdkx7::::res://Spritesheet/idle/mc1.tres<>uid://drbdyv1lje23f::::res://Spritesheet/run/run1.tres<>uid://sgmuv11pmx22::::res://Spritesheet/jump/jump1.tres<>uid://b3mu54binmipd::::res://Spritesheet/run/run2.tres
+mc.tscn::PackedScene::1955755338168051691::1732383691::0::1::::<><>::res://Prefab/mc.gd<>uid://bgail6e2aswlb::::res://Spritesheet/idle/mc.tres<>uid://h3e7ad3iavys::::res://Spritesheet/jump/grav.png<>uid://b0nk56kisdkx7::::res://Spritesheet/idle/mc1.tres<>uid://drbdyv1lje23f::::res://Spritesheet/run/run1.tres<>uid://sgmuv11pmx22::::res://Spritesheet/jump/jump1.tres<>uid://b3mu54binmipd::::res://Spritesheet/run/run2.tres
 ::res://Spritesheet/::1731847883
 ::res://Spritesheet/idle/::1731847883
 mc1.tres::AtlasTexture::4168641073251065614::1731847883::0::1::::<><>::uid://byuyqwupp72hq::::res://Spritesheet/TileMap/colored-transparent_packed.png
