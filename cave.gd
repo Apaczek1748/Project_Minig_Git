@@ -7,7 +7,7 @@ func _ready() -> void:
 
 const ADJ_VECS = [Vector2i(0,1), Vector2i(0,-1), Vector2i(1,0), Vector2i(-1,0), Vector2i(1,1), Vector2i(-1,1), Vector2i(1,-1), Vector2i(-1,-1),]
 func _input(event):
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_pressed("click"):
 		var mouse_pos = get_global_mouse_position()
 		var cell = tile_map.local_to_map(mouse_pos)
 		if cell != null:
