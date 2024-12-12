@@ -9,13 +9,17 @@ var max_jump = 2
 
 
 func _physics_process(delta: float) -> void:
+	var direction := Input.get_axis("left", "right")
 	# Add the gravity. 
 	if not is_on_floor() and not Input.is_action_pressed("grav"):
 		velocity += get_gravity() * delta
-	else:
-		velocity += -get_gravity() * delta * 0.5
-		$AnimatedSprite2D.animation = "grav"
-
+		$AnimatedSprite2D.flip_h = direction < 0
+		$AnimatedSprite2D.animation = "jump"
+		
+	if Input.is_action_pressed("grav"):
+			velocity += -get_gravity() * delta * 0.5
+			$AnimatedSprite2D.animation = "grav"
+			
 	# Handle jump.
 	if is_on_floor():
 		jump_count = 0
@@ -26,7 +30,6 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("left", "right")
 	if direction:
 		if is_on_floor():
 			$AnimatedSprite2D.flip_h = direction < 0

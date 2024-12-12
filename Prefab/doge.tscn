@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5wj4bn43y6qc"]
+
+[ext_resource type="Script" path="res://doge.gd" id="1_q2j7h"]
+[ext_resource type="Texture2D" uid="uid://bj5jqb58khjan" path="res://Spritesheet/Doge/Idle/Doge_sprite.png" id="2_2d1dy"]
+[ext_resource type="Texture2D" uid="uid://bdt2wo2aayu6s" path="res://Spritesheet/Doge/Idle/Doge_sprite2.png" id="3_1c4s4"]
+[ext_resource type="AudioStream" uid="uid://c8dmxqeqj1woq" path="res://New_Project.mp3" id="4_iaulc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88y4k"]
+size = Vector2(12, 14.25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3nvnu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2d1dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1c4s4")
+}],
+"loop": true,
+"name": &"idle_doge",
+"speed": 3.0
+}]
+
+[node name="Doge" type="CharacterBody2D"]
+position = Vector2(254, 630)
+script = ExtResource("1_q2j7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.125)
+shape = SubResource("RectangleShape2D_88y4k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3nvnu")
+animation = &"idle_doge"
+autoplay = "idle_doge"
+frame_progress = 0.48835
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_iaulc")
+autoplay = true
+attenuation = 16.0
+parameters/looping = true
