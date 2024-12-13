@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://24nafn7ky2gt"]
+[gd_scene load_steps=11 format=3 uid="uid://24nafn7ky2gt"]
 
-[ext_resource type="Script" path="res://Prefab/mc.gd" id="1_honio"]
+[ext_resource type="Script" path="res://mc.gd" id="1_honio"]
 [ext_resource type="Texture2D" uid="uid://bgail6e2aswlb" path="res://Spritesheet/Mc/idle/mc.tres" id="2_63aum"]
 [ext_resource type="Texture2D" uid="uid://h3e7ad3iavys" path="res://Spritesheet/Mc/jump/grav.png" id="2_gbe5p"]
 [ext_resource type="Texture2D" uid="uid://b0nk56kisdkx7" path="res://Spritesheet/Mc/idle/mc1.tres" id="3_gc4r4"]
@@ -52,8 +52,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5brt8"]
 size = Vector2(0.806752, 0.723791)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8vsj"]
+radius = 21.2132
+
 [node name="MC" type="CharacterBody2D"]
-position = Vector2(275, 168)
+position = Vector2(284, 163)
 script = ExtResource("1_honio")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -68,6 +71,24 @@ position = Vector2(0, 1)
 scale = Vector2(11.7756, 13.8161)
 shape = SubResource("RectangleShape2D_5brt8")
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_e8vsj")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="Label" type="Label" parent="Camera2D"]
+offset_left = -21.0
+offset_top = 16.0
+offset_right = 21.0
+offset_bottom = 42.0
+text = "CHUJ"
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

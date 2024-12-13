@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+@export var current_level:Node2D
 
 #jump count
 var jump_count = 0
@@ -43,3 +44,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("gem"):
+		current_level.update_ui_score(body.value)
+		body.collect()
+		

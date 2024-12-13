@@ -17,5 +17,8 @@ func _input(event):
 				if tile_map.get_cell_tile_data(cell + nebCell) != null:
 					cellsToUpdate.append(cell + nebCell)
 			tile_map.set_cells_terrain_connect([cell], 0, -1, true)
-	
-	
+
+
+@onready var ui = %ui
+func update_ui_score(value):
+	ui.update_score(value)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5wj4bn43y6qc"]
+[gd_scene load_steps=8 format=3 uid="uid://b5wj4bn43y6qc"]
 
 [ext_resource type="Script" path="res://doge.gd" id="1_q2j7h"]
 [ext_resource type="Texture2D" uid="uid://bj5jqb58khjan" path="res://Spritesheet/Doge/Idle/Doge_sprite.png" id="2_2d1dy"]
+[ext_resource type="Texture2D" uid="uid://bqs0wnyb04o8s" path="res://Spritesheet/Doge/Fall/doge_falling.png" id="2_y4jce"]
 [ext_resource type="Texture2D" uid="uid://bdt2wo2aayu6s" path="res://Spritesheet/Doge/Idle/Doge_sprite2.png" id="3_1c4s4"]
 [ext_resource type="AudioStream" uid="uid://c8dmxqeqj1woq" path="res://New_Project.mp3" id="4_iaulc"]
 
@@ -10,6 +11,14 @@ size = Vector2(12, 14.25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3nvnu"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y4jce")
+}],
+"loop": true,
+"name": &"fall_doge",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_2d1dy")
@@ -23,7 +32,7 @@ animations = [{
 }]
 
 [node name="Doge" type="CharacterBody2D"]
-position = Vector2(254, 630)
+position = Vector2(1, 1)
 script = ExtResource("1_q2j7h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -34,7 +43,7 @@ shape = SubResource("RectangleShape2D_88y4k")
 sprite_frames = SubResource("SpriteFrames_3nvnu")
 animation = &"idle_doge"
 autoplay = "idle_doge"
-frame_progress = 0.48835
+frame_progress = 0.233884
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_iaulc")
